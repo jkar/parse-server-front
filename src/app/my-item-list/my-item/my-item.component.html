@@ -1,0 +1,5 @@
+<div>
+  <a [routerLink]="['edit', item.userId, item.objectId]">{{item.name}}</a>
+  <button (click)="deleteItem(item.objectId)">Delete</button>
+</div>
+
