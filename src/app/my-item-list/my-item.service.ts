@@ -40,9 +40,13 @@ export class MyItemService {
     return this.myItems.slice();
   };
 
-  getMyItem(id: string) {
+  getMyItem(id: string): Item | null {
     const item = this.myItems.find(it => it.objectId === id);
-    return {...item};
+    if (item) {
+      return {...item};
+
+    }
+    return null;
   };
 
   updateItem(id: string, body: { name: string }) {

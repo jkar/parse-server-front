@@ -1,26 +1,16 @@
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a routerLink="/" class="navbar-brand">Home</a>
-    </div>
-    <!-- <div class="collapse navbar-collapse"> -->
-      <div>
-      <ul class="nav navbar-nav">
-        <li routerLinkActive="active" *ngIf="!user">
-          <a routerLink="/login">Log In</a>
-        </li>
-        <li routerLinkActive="active">
-          <a routerLink="/items">Items</a>
-        </li>
-        <li routerLinkActive="active" *ngIf="user">
-          <a routerLink="/myitems">My Items</a>
-        </li>
-        <!-- <li routerLinkActive="active">
-          <a routerLink="/shopping-list">Shopping List</a>
-        </li> -->
-      </ul>
-    </div>
-  </div>
+<ul class="nav">
+  <li class="nav-item">
+    <a routerLink="/" class="nav-link active" aria-current="page" href="#">Home</a>
+  </li>
+  <li class="nav-item" *ngIf="!user">
+    <a routerLink="/login" class="nav-link" href="#">Log In</a>
+  </li>
+  <li class="nav-item">
+    <a routerLink="/items" class="nav-link" href="#">Items</a>
+  </li>
+  <li class="nav-item" *ngIf="user">
+    <a routerLink="/myitems" class="nav-link">My Items</a>
+  </li>
   <button *ngIf="user" (click)="logOut()">Log out</button>
-</nav>
-<p *ngIf="user">Welcome {{user.username}}</p>
+  <p *ngIf="user">Welcome {{user.username}}</p>
+</ul>

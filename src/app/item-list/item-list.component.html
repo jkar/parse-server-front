@@ -1,1 +1,8 @@
-<app-item [item]="item" [index]="i" *ngFor="let item of items; let i = index"></app-item>
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-2" *ngFor="let item of items; let i = index">
+      <app-item [item]="item" [index]="i" ></app-item>
+    </div>
+  </div>
+</div>
+

@@ -27,6 +27,7 @@ export class MyItemListComponent implements OnInit, OnDestroy {
       if (this.user?.id) {
         this.subscr = this.myItemsService.fetchMyItems(this.user?.id)
           .subscribe(myItems => {
+            console.log('It', myItems);
             this.myItems = myItems;
           });
       }
